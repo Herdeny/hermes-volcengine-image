@@ -64,6 +64,7 @@ class VolcengineImageGenProviderTest(unittest.TestCase):
                 "watermark": False,
             },
             timeout=120,
+            proxies={"http": None, "https": None},
         )
         save_url_image.assert_called_once_with(
             "https://example.test/image.png",
