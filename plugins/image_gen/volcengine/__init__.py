@@ -174,6 +174,10 @@ class VolcengineImageGenProvider(ImageGenProvider):
                 },
                 json=payload,
                 timeout=120,
+                # Volcengine Ark is a China-direct service — never route through
+                # a proxy even when the host has HTTP(S)_PROXY set (e.g. Hermes
+                # gateway inheriting a system Clash proxy breaks the request).
+                proxies={"http": None, "https": None},
             )
 
             if response.status_code == 401:
