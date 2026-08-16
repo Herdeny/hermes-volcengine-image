@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 
 API_URL = "https://ark.cn-beijing.volces.com/api/v3/images/generations"
-DEFAULT_MODEL = "doubao-seedream-5-0-pro-260628"
+DEFAULT_MODEL = "doubao-seedream-5-0-260128"
 
 _MODELS: Dict[str, Dict[str, str]] = {
     "doubao-seedream-5-0-pro-260628": {
