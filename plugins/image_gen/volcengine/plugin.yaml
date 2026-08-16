@@ -1,0 +1,7 @@
+name: volcengine
+version: 1.0.0
+description: "Volcengine Ark Seedream image generation backend."
+author: Hermes Community
+kind: backend
+requires_env:
+  - ARK_API_KEY
