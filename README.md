@@ -37,7 +37,7 @@ echo "ARK_API_KEY=your-key" >> ~/.hermes/.env
 
 1. 打开 [火山方舟控制台](https://console.volcengine.com/ark)（火山引擎账号）
 2. 左侧 **API Key 管理** → 创建 API Key
-3. 在 **开通管理** 中开通 `doubao-seedream-5-0-pro-260628` 模型（按量计费，新用户有免费额度）
+3. 在 **开通管理** 中开通 `doubao-seedream-5-0-260128` 模型（按量计费，新用户有免费额度；如需 5.0 Pro 中文小字最强效果，再开通 `doubao-seedream-5-0-pro-260628`）
 
 ## 🚀 使用 / Usage
 
@@ -56,8 +56,8 @@ hermes config set image_gen.provider volcengine
 
 | Model ID | Price | Notes |
 |---|---|---|
-| `doubao-seedream-5-0-pro-260628` | ¥0.30/张 | **默认**，最新 5.0 Pro，中文小字最强 |
-| `doubao-seedream-5-0-260128` | ¥0.30/张 | 5.0，高保真 |
+| `doubao-seedream-5-0-260128` | ¥0.30/张 | **默认**，5.0，高保真（新用户免开通即可用） |
+| `doubao-seedream-5-0-pro-260628` | ¥0.30/张 | 5.0 Pro，中文小字最强（需在控制台开通） |
 | `doubao-seedream-4-5-251128` | ¥0.25/张 | 4.5，均衡 |
 | `doubao-seedream-4-0-250828` | ¥0.22/张 | 4.0，最便宜 |
 
