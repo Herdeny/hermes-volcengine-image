@@ -26,8 +26,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
+      # The plugin imports Hermes core modules (agent.image_gen_provider,
+      # agent.secret_scope). Clone the Hermes agent repo so those imports
+      # resolve, mirroring how the plugin runs inside a real Hermes install.
+      - name: Fetch Hermes core for imports
+        run: |
+          git clone --depth 1 https://github.com/NousResearch/hermes-agent.git /tmp/hermes-agent
+
       - name: Run tests
-        run: python -m unittest discover -s tests -v
+        run: |
+          export PYTHONPATH=/tmp/hermes-agent:$PYTHONPATH
+          python -m unittest discover -s tests -v
 
       - name: Syntax check
         run: |

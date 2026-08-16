@@ -11,6 +11,10 @@ from unittest.mock import Mock, patch
 
 HERMES_REPO = Path.home() / ".hermes" / "hermes-agent"
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+# In CI, the Hermes repo is cloned to /tmp/hermes-agent and provided via
+# PYTHONPATH; only fall back to the local ~/.hermes checkout when it exists.
+if not HERMES_REPO.exists():
+    HERMES_REPO = Path("/tmp/hermes-agent")
 sys.path.insert(0, str(HERMES_REPO))
 sys.path.insert(0, str(PROJECT_ROOT / "plugins"))
 
