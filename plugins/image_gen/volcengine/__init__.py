@@ -22,13 +22,18 @@ logger = logging.getLogger(__name__)
 
 
 API_URL = "https://ark.cn-beijing.volces.com/api/v3/images/generations"
-DEFAULT_MODEL = "doubao-seedream-5-0-260128"
+DEFAULT_MODEL = "doubao-seedream-5-0-pro-260628"
 
 _MODELS: Dict[str, Dict[str, str]] = {
-    "doubao-seedream-5-0-260128": {
+    "doubao-seedream-5-0-pro-260628": {
         "display": "Doubao Seedream 5.0 Pro",
         "price": "¥0.30/image",
-        "strengths": "Highest fidelity and strong Chinese small-text rendering",
+        "strengths": "Latest 5.0 Pro — best Chinese small-text rendering (parity with GPT Image 2)",
+    },
+    "doubao-seedream-5-0-260128": {
+        "display": "Doubao Seedream 5.0",
+        "price": "¥0.30/image",
+        "strengths": "High fidelity and strong Chinese text rendering",
     },
     "doubao-seedream-4-5-251128": {
         "display": "Doubao Seedream 4.5",
